@@ -1,0 +1,352 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BB23A42B172F6897006AD245 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB23A42A172F6897006AD245 /* UIKit.framework */; };
+		BB23A42D172F6897006AD245 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB23A42C172F6897006AD245 /* Foundation.framework */; };
+		BB23A42F172F6897006AD245 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB23A42E172F6897006AD245 /* CoreGraphics.framework */; };
+		BB23A435172F6897006AD245 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BB23A433172F6897006AD245 /* InfoPlist.strings */; };
+		BB23A437172F6897006AD245 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BB23A436172F6897006AD245 /* main.m */; };
+		BB23A43B172F6897006AD245 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BB23A43A172F6897006AD245 /* AppDelegate.m */; };
+		BB23A43D172F6897006AD245 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BB23A43C172F6897006AD245 /* Default.png */; };
+		BB23A43F172F6897006AD245 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BB23A43E172F6897006AD245 /* Default@2x.png */; };
+		BB23A441172F6897006AD245 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BB23A440172F6897006AD245 /* Default-568h@2x.png */; };
+		BB3A5156172F9421002A77C1 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB3A5155172F9421002A77C1 /* MediaPlayer.framework */; };
+		BB3A515E172FC81F002A77C1 /* icon144.png in Resources */ = {isa = PBXBuildFile; fileRef = BB3A515D172FC81F002A77C1 /* icon144.png */; };
+		BB3A5160172FC84F002A77C1 /* icon57.png in Resources */ = {isa = PBXBuildFile; fileRef = BB3A515F172FC84F002A77C1 /* icon57.png */; };
+		BB3A5162172FC871002A77C1 /* icon114.png in Resources */ = {isa = PBXBuildFile; fileRef = BB3A5161172FC871002A77C1 /* icon114.png */; };
+		BB3A5164172FC88E002A77C1 /* icon72.png in Resources */ = {isa = PBXBuildFile; fileRef = BB3A5163172FC88E002A77C1 /* icon72.png */; };
+		BB3A5166172FEB8B002A77C1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB3A5165172FEB8B002A77C1 /* AVFoundation.framework */; };
+		BB3A51701730D9DD002A77C1 /* ListView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3A516C1730D9DD002A77C1 /* ListView.m */; };
+		BB3A51711730D9DD002A77C1 /* PlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3A516F1730D9DD002A77C1 /* PlayView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BB23A427172F6897006AD245 /* EnPlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnPlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB23A42A172F6897006AD245 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		BB23A42C172F6897006AD245 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BB23A42E172F6897006AD245 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		BB23A432172F6897006AD245 /* EnPlay-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EnPlay-Info.plist"; sourceTree = "<group>"; };
+		BB23A434172F6897006AD245 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BB23A436172F6897006AD245 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BB23A438172F6897006AD245 /* EnPlay-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EnPlay-Prefix.pch"; sourceTree = "<group>"; };
+		BB23A439172F6897006AD245 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BB23A43A172F6897006AD245 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BB23A43C172F6897006AD245 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		BB23A43E172F6897006AD245 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		BB23A440172F6897006AD245 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		BB3A5155172F9421002A77C1 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		BB3A515D172FC81F002A77C1 /* icon144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon144.png; path = ../icon144.png; sourceTree = "<group>"; };
+		BB3A515F172FC84F002A77C1 /* icon57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon57.png; path = ../icon57.png; sourceTree = "<group>"; };
+		BB3A5161172FC871002A77C1 /* icon114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon114.png; path = ../icon114.png; sourceTree = "<group>"; };
+		BB3A5163172FC88E002A77C1 /* icon72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon72.png; path = ../icon72.png; sourceTree = "<group>"; };
+		BB3A5165172FEB8B002A77C1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		BB3A516B1730D9DD002A77C1 /* ListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListView.h; sourceTree = "<group>"; };
+		BB3A516C1730D9DD002A77C1 /* ListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListView.m; sourceTree = "<group>"; };
+		BB3A516E1730D9DD002A77C1 /* PlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayView.h; sourceTree = "<group>"; };
+		BB3A516F1730D9DD002A77C1 /* PlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BB23A424172F6897006AD245 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB3A5166172FEB8B002A77C1 /* AVFoundation.framework in Frameworks */,
+				BB3A5156172F9421002A77C1 /* MediaPlayer.framework in Frameworks */,
+				BB23A42B172F6897006AD245 /* UIKit.framework in Frameworks */,
+				BB23A42D172F6897006AD245 /* Foundation.framework in Frameworks */,
+				BB23A42F172F6897006AD245 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BB23A41E172F6897006AD245 = {
+			isa = PBXGroup;
+			children = (
+				BB23A430172F6897006AD245 /* EnPlay */,
+				BB23A429172F6897006AD245 /* Frameworks */,
+				BB23A428172F6897006AD245 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BB23A428172F6897006AD245 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BB23A427172F6897006AD245 /* EnPlay.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BB23A429172F6897006AD245 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BB3A5165172FEB8B002A77C1 /* AVFoundation.framework */,
+				BB3A5155172F9421002A77C1 /* MediaPlayer.framework */,
+				BB23A42A172F6897006AD245 /* UIKit.framework */,
+				BB23A42C172F6897006AD245 /* Foundation.framework */,
+				BB23A42E172F6897006AD245 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BB23A430172F6897006AD245 /* EnPlay */ = {
+			isa = PBXGroup;
+			children = (
+				BB3A51721730D9E2002A77C1 /* Delegate */,
+				BB3A516A1730D9DD002A77C1 /* ListView */,
+				BB3A516D1730D9DD002A77C1 /* PlayView */,
+				BB23A431172F6897006AD245 /* Supporting Files */,
+			);
+			path = EnPlay;
+			sourceTree = "<group>";
+		};
+		BB23A431172F6897006AD245 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BB23A432172F6897006AD245 /* EnPlay-Info.plist */,
+				BB23A433172F6897006AD245 /* InfoPlist.strings */,
+				BB23A436172F6897006AD245 /* main.m */,
+				BB23A438172F6897006AD245 /* EnPlay-Prefix.pch */,
+				BB23A43C172F6897006AD245 /* Default.png */,
+				BB23A43E172F6897006AD245 /* Default@2x.png */,
+				BB23A440172F6897006AD245 /* Default-568h@2x.png */,
+				BB3A5163172FC88E002A77C1 /* icon72.png */,
+				BB3A5161172FC871002A77C1 /* icon114.png */,
+				BB3A515F172FC84F002A77C1 /* icon57.png */,
+				BB3A515D172FC81F002A77C1 /* icon144.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BB3A516A1730D9DD002A77C1 /* ListView */ = {
+			isa = PBXGroup;
+			children = (
+				BB3A516B1730D9DD002A77C1 /* ListView.h */,
+				BB3A516C1730D9DD002A77C1 /* ListView.m */,
+			);
+			path = ListView;
+			sourceTree = "<group>";
+		};
+		BB3A516D1730D9DD002A77C1 /* PlayView */ = {
+			isa = PBXGroup;
+			children = (
+				BB3A516E1730D9DD002A77C1 /* PlayView.h */,
+				BB3A516F1730D9DD002A77C1 /* PlayView.m */,
+			);
+			path = PlayView;
+			sourceTree = "<group>";
+		};
+		BB3A51721730D9E2002A77C1 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				BB23A439172F6897006AD245 /* AppDelegate.h */,
+				BB23A43A172F6897006AD245 /* AppDelegate.m */,
+			);
+			name = Delegate;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BB23A426172F6897006AD245 /* EnPlay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB23A44D172F6897006AD245 /* Build configuration list for PBXNativeTarget "EnPlay" */;
+			buildPhases = (
+				BB23A423172F6897006AD245 /* Sources */,
+				BB23A424172F6897006AD245 /* Frameworks */,
+				BB23A425172F6897006AD245 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EnPlay;
+			productName = EnPlay;
+			productReference = BB23A427172F6897006AD245 /* EnPlay.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BB23A41F172F6897006AD245 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = Horical;
+			};
+			buildConfigurationList = BB23A422172F6897006AD245 /* Build configuration list for PBXProject "EnPlay" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BB23A41E172F6897006AD245;
+			productRefGroup = BB23A428172F6897006AD245 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BB23A426172F6897006AD245 /* EnPlay */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BB23A425172F6897006AD245 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB23A435172F6897006AD245 /* InfoPlist.strings in Resources */,
+				BB23A43D172F6897006AD245 /* Default.png in Resources */,
+				BB23A43F172F6897006AD245 /* Default@2x.png in Resources */,
+				BB23A441172F6897006AD245 /* Default-568h@2x.png in Resources */,
+				BB3A515E172FC81F002A77C1 /* icon144.png in Resources */,
+				BB3A5160172FC84F002A77C1 /* icon57.png in Resources */,
+				BB3A5162172FC871002A77C1 /* icon114.png in Resources */,
+				BB3A5164172FC88E002A77C1 /* icon72.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BB23A423172F6897006AD245 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB23A437172F6897006AD245 /* main.m in Sources */,
+				BB23A43B172F6897006AD245 /* AppDelegate.m in Sources */,
+				BB3A51701730D9DD002A77C1 /* ListView.m in Sources */,
+				BB3A51711730D9DD002A77C1 /* PlayView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BB23A433172F6897006AD245 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB23A434172F6897006AD245 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BB23A44B172F6897006AD245 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BB23A44C172F6897006AD245 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BB23A44E172F6897006AD245 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EnPlay/EnPlay-Prefix.pch";
+				INFOPLIST_FILE = "EnPlay/EnPlay-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		BB23A44F172F6897006AD245 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EnPlay/EnPlay-Prefix.pch";
+				INFOPLIST_FILE = "EnPlay/EnPlay-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BB23A422172F6897006AD245 /* Build configuration list for PBXProject "EnPlay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB23A44B172F6897006AD245 /* Debug */,
+				BB23A44C172F6897006AD245 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB23A44D172F6897006AD245 /* Build configuration list for PBXNativeTarget "EnPlay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB23A44E172F6897006AD245 /* Debug */,
+				BB23A44F172F6897006AD245 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BB23A41F172F6897006AD245 /* Project object */;
+}
