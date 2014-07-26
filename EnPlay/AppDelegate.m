@@ -16,11 +16,53 @@
 @synthesize settingFile;
 @synthesize songPaths;
 @synthesize playView;
+@synthesize readView;
 
 - (void)dealloc
 {
     [_window release];
     [super dealloc];
+}
+
+- (void) remoteControlReceivedWithEvent:(UIEvent *)event
+{
+    //NSLog(@"remoteControlReceivedWithEvent %d, %d", event.type, event.subtype);
+    
+    /*
+     UIEventSubtypeRemoteControlPlay                 = 100,
+     UIEventSubtypeRemoteControlPause                = 101,
+     UIEventSubtypeRemoteControlStop                 = 102,
+     UIEventSubtypeRemoteControlTogglePlayPause      = 103,
+     UIEventSubtypeRemoteControlNextTrack            = 104,
+     UIEventSubtypeRemoteControlPreviousTrack        = 105,
+     UIEventSubtypeRemoteControlBeginSeekingBackward = 106,
+     UIEventSubtypeRemoteControlEndSeekingBackward   = 107,
+     UIEventSubtypeRemoteControlBeginSeekingForward  = 108,
+     UIEventSubtypeRemoteControlEndSeekingForward    = 109,
+     */
+    
+    if(event.subtype == UIEventSubtypeRemoteControlPlay)
+    {
+        [playView.mp.moviePlayer performSelectorInBackground:@selector(play) withObject:nil];
+    }
+    else if(event.subtype == UIEventSubtypeRemoteControlNextTrack)
+    {
+        if(playView.curListView)
+        {
+            [playView.curListView performSelectorInBackground:@selector(playNextItem) withObject:nil];
+        }
+    }
+    else if(event.subtype == UIEventSubtypeRemoteControlPreviousTrack)
+    {
+        if(playView.curListView)
+        {
+            [playView.curListView performSelectorInBackground:@selector(playPreviousItem) withObject:nil];
+        }
+    }
+    else if(event.subtype == UIEventSubtypeRemoteControlPause)
+    {
+        [playView.mp.moviePlayer pause];
+    }
 }
 
 - (void) pushNewListView:(NSString*)title withDir:(NSString*)dir
@@ -43,7 +85,7 @@
     //if(![[NSFileManager defaultManager] fileExistsAtPath:settingFile])
     {
         songPaths = [[NSMutableArray alloc] init];
-        [songPaths addObject:@"/"];
+        [songPaths addObject:[appPath stringByDeletingLastPathComponent]];
         [songPaths writeToFile:settingFile atomically:YES];
     }
     //else
@@ -58,8 +100,8 @@
     // Override point for customization after application launch.
     
     ListView *listView = [[ListView alloc] init];
-    listView.title = @"Enplay V1.0";
-    [listView refresh:[songPaths objectAtIndex:0]];
+    listView.title = @"Cốc Cốc V1.1";
+    [listView refresh:[songPaths lastObject]];
     
     self.nav = [[UINavigationController alloc] initWithRootViewController:listView];
     
@@ -67,9 +109,17 @@
     [self.window makeKeyAndVisible];
     
     playView = [[PlayView alloc] init];
-    
+    readView = [[ReadView alloc] init];
+
     [[NSNotificationCenter defaultCenter] addObserver:playView selector:@selector(onMovieFinished:) name:MPMoviePlayerPlaybackDidFinishNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:playView selector:@selector(onMoviePlayChangeState:) name:MPMoviePlayerPlaybackStateDidChangeNotification object:nil];
+    
+    // for run application in background
+    NSError *setCategoryError = nil;
+    NSError *activationError = nil;
+    [[AVAudioSession sharedInstance] setActive:YES error:&activationError];
+    [[AVAudioSession sharedInstance] setDelegate:self];
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:&setCategoryError];
     
     return YES;
 }

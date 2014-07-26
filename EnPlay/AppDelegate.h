@@ -12,6 +12,7 @@
 
 #import "ListView.h"
 #import "PlayView.h"
+#import "ReadView.h"
 
 @class ViewController;
 
@@ -28,6 +29,7 @@
 @property (nonatomic, assign) NSString *settingFile;
 @property (nonatomic, assign) NSMutableArray *songPaths;
 @property (nonatomic, assign) PlayView *playView;
+@property (nonatomic, assign) ReadView *readView;
 
 - (void) pushNewListView:(NSString*)title withDir:(NSString*)dir;
 

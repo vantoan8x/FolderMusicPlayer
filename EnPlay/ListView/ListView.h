@@ -18,5 +18,6 @@
 
 - (void) refresh:(NSString*)path;
 - (void) playNextItem;
+- (void) playPreviousItem;
 
 @end

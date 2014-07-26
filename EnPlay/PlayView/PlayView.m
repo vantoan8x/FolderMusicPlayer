@@ -50,6 +50,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
 {
     return YES;
@@ -102,7 +107,7 @@
     [self.view addSubview:mp.view];
     
     [mp.moviePlayer prepareToPlay];
-    [mp.moviePlayer play];
+    [mp.moviePlayer performSelectorInBackground:@selector(play) withObject:NO];
 }
 
 - (void) onMoviePlayChangeState:(NSNotification*)notify
@@ -121,7 +126,7 @@
     {
         if(mp)
         {
-            [mp.moviePlayer play];
+            [mp.moviePlayer performSelectorInBackground:@selector(play) withObject:nil];
         }
     }
 }
@@ -148,9 +153,9 @@
     }
 }
 
-- (BOOL) canPlayThisFile:(NSString *)filename
+- (BOOL) canPlayThisFile:(NSString *)fileName
 {
-    NSString *ext = [filename pathExtension];
+    NSString *ext = [fileName pathExtension];
     
     if(ext)
     {
@@ -165,5 +170,15 @@
     return NO;
 }
 
+- (BOOL) canReadThisFile:(NSString*)fileName
+{
+    NSString *ext = [fileName pathExtension];
+    if([ext isEqualToString:@"pdf"])
+    {
+        return YES;
+    }
+
+    return NO;
+}
 
 @end

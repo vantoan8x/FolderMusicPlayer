@@ -19,6 +19,7 @@
 
 - (void) playFile:(NSString*)filename;
 - (BOOL) canPlayThisFile:(NSString*)filename;
+- (BOOL) canReadThisFile:(NSString*)filename;
 - (void) onMovieFinished:(NSNotification*)notify;
 - (void) onMoviePlayChangeState:(NSNotification*)notify;
 - (void) onGotoBackGround;

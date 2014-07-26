@@ -49,9 +49,45 @@ int finderSortWithLocale(id string1, id string2, void *locale)
     
 }
 
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
 {
     return YES;
+}
+
+- (void) playPreviousItem
+{
+    [self refresh:[NSString stringWithFormat:@"%@", Dir]];
+    
+    if(pos > 0)
+    {
+        BOOL isPlayNextFile = NO;
+        while((--pos>=0) && (!isPlayNextFile))
+        {
+            BOOL isPath;
+            NSString *file = [NSString stringWithFormat:@"%@/%@", Dir, [files objectAtIndex:pos]];
+            
+            if([[NSFileManager defaultManager] fileExistsAtPath:file isDirectory:&isPath])
+            {
+                if((!isPath) && [shareApp.playView canPlayThisFile:file])
+                {
+                    isPlayNextFile = YES;
+                    [shareApp.playView playFile:file];
+                    shareApp.playView.curListView = self;
+                    return;
+                }
+            }
+        }
+        
+        if(!isPlayNextFile)
+        {
+            [shareApp.nav popViewControllerAnimated:YES];
+        }
+    }
 }
 
 - (void) playNextItem
@@ -91,9 +127,25 @@ int finderSortWithLocale(id string1, id string2, void *locale)
     
     self.view.backgroundColor = [UIColor scrollViewTexturedBackgroundColor];
     UIBarButtonItem *btn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(onRefreshPress)];
+    UIBarButtonItem *btnRoot = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRewind target:self action:@selector(onPushRoot)];
+    self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:btn, btnRoot, nil];
     
-    self.navigationItem.rightBarButtonItem = btn;
-    
+    NSDictionary *navbarTitleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor blueColor], UITextAttributeTextColor, nil];
+    [self.navigationController.navigationBar setTitleTextAttributes:navbarTitleTextAttributes];
+}
+
+- (void) onPushRoot
+{
+    if([Dir length] > 2)
+    {
+        [shareApp pushNewListView:@"/" withDir:@"/"];
+        NSString *appPath = [[NSString alloc] initWithFormat:@"%@", [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0]];
+        [[[[UIAlertView alloc] initWithTitle:@"App Path" message:appPath delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease] show];
+    }
+    else
+    {
+        [shareApp.nav popToRootViewControllerAnimated:YES];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -172,7 +224,7 @@ int finderSortWithLocale(id string1, id string2, void *locale)
         {
             if(isPath)
             {
-                cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+                cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             }
             else
             {
@@ -183,7 +235,7 @@ int finderSortWithLocale(id string1, id string2, void *locale)
         cell.textLabel.text = [NSString stringWithFormat:@"%@", filename];
         cell.textLabel.font = [UIFont systemFontOfSize:18];
         cell.textLabel.numberOfLines = 0;
-        cell.textLabel.textColor = [UIColor whiteColor];
+        cell.textLabel.textColor = [UIColor blueColor];
         
         return cell;
     }
@@ -211,6 +263,10 @@ int finderSortWithLocale(id string1, id string2, void *locale)
             pos = indexPath.row;
             [shareApp.playView playFile:file];
             shareApp.playView.curListView = self;
+        }
+        else if([shareApp.playView canReadThisFile:file])
+        {
+            [shareApp.readView readFile:file];
         }
         else
         {

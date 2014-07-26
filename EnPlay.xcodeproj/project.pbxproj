@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C6B5CF01983F17A0051C5AE /* ReadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6B5CEF1983F17A0051C5AE /* ReadView.m */; };
 		BB23A42B172F6897006AD245 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB23A42A172F6897006AD245 /* UIKit.framework */; };
 		BB23A42D172F6897006AD245 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB23A42C172F6897006AD245 /* Foundation.framework */; };
 		BB23A42F172F6897006AD245 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB23A42E172F6897006AD245 /* CoreGraphics.framework */; };
@@ -27,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C6B5CEE1983F17A0051C5AE /* ReadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadView.h; sourceTree = "<group>"; };
+		8C6B5CEF1983F17A0051C5AE /* ReadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadView.m; sourceTree = "<group>"; };
 		BB23A427172F6897006AD245 /* EnPlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnPlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB23A42A172F6897006AD245 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BB23A42C172F6897006AD245 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -68,6 +71,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C6B5CED1983F17A0051C5AE /* ReadView */ = {
+			isa = PBXGroup;
+			children = (
+				8C6B5CEE1983F17A0051C5AE /* ReadView.h */,
+				8C6B5CEF1983F17A0051C5AE /* ReadView.m */,
+			);
+			path = ReadView;
+			sourceTree = "<group>";
+		};
 		BB23A41E172F6897006AD245 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +115,7 @@
 				BB3A51721730D9E2002A77C1 /* Delegate */,
 				BB3A516A1730D9DD002A77C1 /* ListView */,
 				BB3A516D1730D9DD002A77C1 /* PlayView */,
+				8C6B5CED1983F17A0051C5AE /* ReadView */,
 				BB23A431172F6897006AD245 /* Supporting Files */,
 			);
 			path = EnPlay;
@@ -225,6 +238,7 @@
 				BB23A437172F6897006AD245 /* main.m in Sources */,
 				BB23A43B172F6897006AD245 /* AppDelegate.m in Sources */,
 				BB3A51701730D9DD002A77C1 /* ListView.m in Sources */,
+				8C6B5CF01983F17A0051C5AE /* ReadView.m in Sources */,
 				BB3A51711730D9DD002A77C1 /* PlayView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,7 +319,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EnPlay/EnPlay-Prefix.pch";
 				INFOPLIST_FILE = "EnPlay/EnPlay-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -318,7 +332,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EnPlay/EnPlay-Prefix.pch";
 				INFOPLIST_FILE = "EnPlay/EnPlay-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
